@@ -44,6 +44,33 @@ namespace Universidade
         public int GetDuracao()
         {
             return Duracao;
-        }        
+        }      
+
+
+        public double GetMedia(double provaSemestralUm, double provaSemestralDois)
+        {
+
+            double media=(provaSemestralUm+provaSemestralDois)/2;
+            return media;
+        }
+
+        public double GetMedia(double provaSemestralUm, double provaSemestralDois, double trabalhoUm, double trabalhoDois)
+        {
+
+            double mediaProvas=(provaSemestralUm+provaSemestralDois)/2;
+            double mediaTrabalhos=(trabalhoUm+trabalhoDois)/2;
+            double media=(mediaProvas*0.6)+(mediaTrabalhos*0.4);
+            return media;
+        }
+
+        public double GetMedia(double provaSemestralUm, double provaSemestralDois, double trabalhoUm, double trabalhoDois, double provaMensalUm, double provaMensalDois)
+        {
+
+            double mediaProvasSemestrais=(provaSemestralUm+provaSemestralDois)/2;
+            double mediaTrabalhos=(trabalhoUm+trabalhoDois)/2;
+            double mediaProvasMensais=(provaMensalUm+provaMensalDois)/2;
+            double media=(mediaProvasSemestrais*0.5)+(mediaTrabalhos*0.2)+(mediaProvasMensais*0.3);
+            return media;
+        }
     }
 }
