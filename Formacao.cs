@@ -7,6 +7,12 @@ namespace Universidade
         private double Mensalidade { get; set; }
         private int Duracao { get; set; }
 
+        public Formacao(string descricao, int periodo)
+        {
+            Descricao=descricao;
+            Periodo=periodo;
+        }
+
         public void SetDescricao(string descricao)
         {
             Descricao=descricao;
@@ -36,6 +42,10 @@ namespace Universidade
         {
             return Mensalidade;
         }
+        public virtual void CalcMensalidade(int fator)
+        {
+
+        }
         
         public void SetDuracao(int duracao)
         {
@@ -45,6 +55,10 @@ namespace Universidade
         {
             return Duracao;
         }      
+        public virtual void DefinirDuracao()
+        {
+            
+        }
 
 
         public double GetMedia(double provaSemestralUm, double provaSemestralDois)
